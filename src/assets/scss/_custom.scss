@@ -1,0 +1,192 @@
+body{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#bb6cd1+0,4172b7+100 */
+  background: rgb(187,108,209); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(187,108,209,1) 0%, rgba(65,114,183,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(187,108,209,1) 0%,rgba(65,114,183,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(187,108,209,1) 0%,rgba(65,114,183,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bb6cd1', endColorstr='#4172b7',GradientType=0 ); /* IE6-9 */
+  background-attachment: fixed;
+}
+
+h1,h2,h3,h4{
+  text-transform: uppercase;
+}
+
+header{
+  padding:rem-calc(50 0);
+}
+
+.main-navigation{
+  background-color: $primary-color;
+  margin-bottom:rem-calc(20);
+  &.fixed{
+    top:0;
+    left:0;
+    position: fixed;
+    z-index: 1000;
+    width:100%;
+  }
+}
+
+.menu{
+  > li{
+    @include breakpoint(medium){
+      height:100%;
+    }
+    &:hover{
+      background-color: $secondary-color;
+      a{
+        color:$primary-color;
+      }
+    }
+
+    > a {
+      color:$white;
+      font-weight: $global-weight-bold;
+      text-transform: uppercase;
+      justify-content: space-around !important;
+      height:100%;
+      &.active{
+        color:$primary-color;
+        background-color: $secondary-color
+      }
+    }
+  }
+}
+
+  div.responsive-menu{
+    padding: rem-calc(10);
+    .menu-icon{
+      @include hamburger($white, $white, 40px, 30px, 5px, 3);
+    }
+    .title-bar-title{
+      color:$white;
+      margin-left: rem-calc(20);
+    }
+  }
+
+  div.orbit{
+    background-color: $primary-color;
+    padding:rem-calc(20);
+  }
+
+div.about-us{
+  margin-top:rem-calc(30);
+  i{
+    font-size: rem-calc(60);
+    margin:rem-calc(20 0);
+    display: block;
+  }
+  h3{
+    margin-bottom: rem-calc(50);
+    text-transform: uppercase;
+  }
+}
+
+.social{
+  font-size: rem-calc(60);
+  > li{
+    margin-right: rem-calc(10);
+    &:hover{
+      background-color: transparent;
+    }
+  > a{
+      padding:rem-calc(0);
+      &:hover{
+        color:$white;
+      }
+    }
+  }
+}
+
+div.our-designs{
+  background-color: $primary-color;
+  padding:rem-calc(20);
+  margin-top:rem-calc(20 0);
+  h2 {
+    margin:rem-calc(20 0 30 0);
+  }
+  div.shirt{
+    background-color: $white;
+    margin-bottom: rem-calc(30);
+    padding-top:rem-calc(5);
+    h4{
+      margin-top: rem-calc(20);
+      background-color: $pink;
+      padding: rem-calc(10);
+    }
+    p.price{
+      color:$primary-color;
+      font-size: rem-calc(40);
+      font-weight: $global-weight-bold;
+    }
+    .button{
+      @include button-style($secondary-color, darken( $secondary-color, 5), $primary-color);
+      font-size: rem-calc(20);
+      font-weight: $global-weight-bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.testimonials{
+  margin-top: rem-calc(30);
+  .orbit {
+    background-color: $white;
+    border-radius:$global-radius;
+    margin-bottom: rem-calc(20);
+    @include breakpoint(medium){
+      margin:0;
+    }
+    blockquote{
+      font-size: rem-calc(20);
+    }
+    cite{
+      font-weight: $global-weight-bold;
+    }
+  }
+}
+
+.send-your-design{
+  margin-top: rem-calc(30);
+  .form-container{
+    background-color: $primary-color;
+    padding: rem-calc(30);
+    form{
+      background-color: $white;
+      margin-top: rem-calc(40);
+      padding: rem-calc(40 0 20 0);
+      legend{
+        font-size: rem-calc(26);
+        text-align: center;
+        color:$primary-color;
+        text-transform: uppercase;
+        font-weight: $global-weight-bold;
+        margin-bottom: rem-calc(20);
+      }
+      label{
+        text-transform: uppercase;
+      }
+      .button{
+        text-transform: uppercase;
+        font-weight: $global-weight-bold;
+        min-width: rem-calc(150);
+        border-radius: 0;
+      }
+      .secondary{
+        color:$primary-color;
+      }
+    }
+  }
+}
+
+footer{
+  margin-top: rem-calc(40);
+  background-color: $primary-color;
+  padding: rem-calc(30 0);
+  p{
+    margin:0;
+    font-weight: $global-weight-bold;
+    color:$white;
+  }
+}
